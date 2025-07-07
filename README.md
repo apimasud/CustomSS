@@ -43,3 +43,6 @@ This extension automates the process with ready-to-use presets and smarter delay
 3. Enable Developer option from Extention
 4. Drag the folder into browser while Extention Tab is active.
 5. Pin the Extention for easy access.
+
+
+![image alt](https://github.com/apimasud/CustomSS/blob/main/Demo.gif?raw=true)
