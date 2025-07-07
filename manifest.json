@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Custom SS",
+  "version": "1.0",
+  "description": "Automates taking high-resolution screenshots with predefined dimensions.",
+  "permissions": ["activeTab", "scripting", "tabs", "debugger", "downloads"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "commands": {
+    "capture-screenshot": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y"
+      },
+      "description": "Capture Custom Dimension Screenshot"
+    }
+  }
+}

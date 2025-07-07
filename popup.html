@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Screenshot Automator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      width: 220px; /* Slightly wider for better readability */
+      padding: 8px; /* Slightly more padding */
+      background-color: #fff;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    h3 {
+      font-size: 14px; /* Larger heading */
+      margin-bottom: 8px;
+      text-align: center;
+      color: #555;
+    }
+    .resolution-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two columns for resolutions */
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+    .resolution-btn {
+      background-color: #f8f9fa;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 6px; /* Increased padding */
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.1s ease; /* Smooth transition for all properties */
+      transform: scale(1); /* Default scale */
+    }
+    .resolution-btn:hover {
+      background-color: #a2d2ff; /* Light gray background on hover */
+      transform: scale(1.1); /* Slight scaling effect on hover */
+    }
+    .resolution-btn:hover .description {
+      color: #000000; /* description text on hover */
+    }
+    .resolution-btn.active {
+      background-color: #4cc9f0; /* background for active button */
+      color: #000000; /* text for active button */
+      border-color: #8338ec;
+      transform: scale(1.1); /* Slight scaling effect for active state */
+    }
+    .resolution-btn.active .description {
+      color: #000814; /* Bottom description text for active button */
+    }
+    .resolution-btn .resolution {
+      font-size: 12px; /* Resolution text */
+      display: block;
+      margin-bottom: 2px; /* Space between resolution and description */
+    }
+    .resolution-btn .description {
+      font-size: 10px; /* Smaller font size for description */
+      font-weight: bold; /* Bold text */
+      color: #555; /* Subtle color */
+      transition: color 0.1s ease; /* Smooth color transition */
+    }
+    label {
+      font-size: 12px; /* Larger font size */
+      color: #555;
+      margin-bottom: 5px;
+      display: block;
+    }
+    input, button {
+      width: 100%;
+      padding: 8px; /* Increased padding */
+      margin: 4px 0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 12px; /* Larger font size */
+      transition: border-color 0.1s ease;
+    }
+    button {
+      background-color: #335c67;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.1s ease, transform 0.1s ease;
+    }
+    button:hover {
+      background-color: #2a9d8f;
+      transform: scale(1.1); /* Slight scaling effect on hover */
+    }
+    .status-message {
+      font-size: 12px; /* Larger font size */
+      color: #df5e14; /* Green for success */
+      text-align: center;
+      margin-top: 8px;
+      display: none; /* Hidden by default */
+    }
+  </style>
+</head>
+<body>
+  <h3>Select Resolution</h3>
+  <div class="resolution-list">
+    <div class="resolution-btn" data-width="1920" data-height="1080">
+      <span class="resolution">1920x1080</span>
+      <span class="description">(FHD)</span>
+    </div>
+    <div class="resolution-btn" data-width="2560" data-height="1440">
+      <span class="resolution">2560x1440</span>
+      <span class="description">(QHD)</span>
+    </div>
+    <div class="resolution-btn" data-width="3840" data-height="2160">
+      <span class="resolution">3840x2160</span>
+      <span class="description">(4K)</span>
+    </div>
+    <div class="resolution-btn" data-width="5120" data-height="2880">
+      <span class="resolution">5120x2880</span>
+      <span class="description">(5K)</span>
+    </div>
+    <div class="resolution-btn" data-width="6016" data-height="3384">
+      <span class="resolution">6016x3384</span>
+      <span class="description">(6K)</span>
+    </div>
+    <div class="resolution-btn" data-width="7680" data-height="4320">
+      <span class="resolution">7680x4320</span>
+      <span class="description">(7K)</span>
+    </div>
+    <div class="resolution-btn" data-width="8192" data-height="4320">
+      <span class="resolution">8192x4320</span>
+      <span class="description">(8K)</span>
+    </div>
+  </div>
+  <label for="delay">Delay (s):</label>
+  <input type="number" id="delay" value="0" min="0" placeholder="Delay">
+  <button id="captureBtn">Capture</button>
+  <div id="statusMessage" class="status-message"></div> <!-- Status message area -->
+  <script src="popup.js"></script>
+</body>
+</html>
