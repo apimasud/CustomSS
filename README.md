@@ -40,9 +40,10 @@ This extension automates the process with ready-to-use presets and smarter delay
 
 1. Download
 2. Unzip
-3. Enable Developer option from Extention
-4. Drag the folder into browser while Extention Tab is active.
-5. Pin the Extention for easy access.
+3. Enable Developer option from Extention Tab
+5. Drag the folder into browser while Extention Tab is active.
+6. Or Simply click on "Load Unpacked" and brows the folder you just unzipeda
+8. Pin the Extention for easy access.
 
 
 ![image alt](https://github.com/apimasud/CustomSS/blob/main/Demo.gif?raw=true)
